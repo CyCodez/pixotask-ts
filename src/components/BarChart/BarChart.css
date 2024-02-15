@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+*{
+  box-sizing: border-box;
+}
+.sidebar {
+  margin: 0;
+  padding-top: 40px;
+  width: 250px;
+  text-align: center;
+  background-color: #fff4e6;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+.sidebar-name{
+    font-size: 19px;
+    font-weight: 700;
+}
+.log-out{
+font-size: 18px;
+}
+
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 26px;
+  text-decoration: none;
+}
+ 
+.mybtn{
+ background-color: #e03131;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 10px;
+  padding:6px 12px;
+  border:1px solid transparent;
+  box-sizing: border-box;
+   font-size: 19px;
+  
+}
+
+div.content {
+  margin-left: 270px;
+  padding: 1px 16px;
+  padding-top: 38px;
+  height: 1000px;
+}
+.content h1{
+    margin-bottom: 40px;
+}
+.flex-container{
+  display:flex;
+  flex:1;
+  gap: 15px;
+  margin-bottom: 100px;
+  /* justify-content:center ; */
+}
+
+.flex-container > div{
+  border: 1px solid black;
+  width:500px;
+  padding: 5px 15px;
+  text-align: start;
+}
+.amount{
+  font-size: 25px;
+  font-weight: bold;
+}
+.title{
+  margin-top: 18px;
+}
+
+.chart-container {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+}
+
+ .table-responsive {
+    overflow-x: auto;
+margin-top: 50px;
+}
+
+.table-responsive h2{
+  text-align: center;
+ font-size: 25px;
+  font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    white-space: nowrap;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 15px;
+}
+
+th {
+    background-color: #e03131;
+    color:white
+}
+
+@media screen and (max-width: 600px) {
+    .chart-container canvas {
+        width: 100% !important; /* Set canvas width to 100% of its container */
+        height: auto !important; /* Let the height adjust automatically */
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}@media only screen and (max-width: 600px) {
+.flex-container{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.flex-container > div{
+  width:100%;
+  text-align: center;
+}
+  .chart-container {
+    width: 100%;
+  }
+  .content h1{
+    text-align: center;
+  }
+}

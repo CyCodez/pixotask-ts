@@ -82,7 +82,7 @@ const MainComponent: React.FC = () => {
           Jahkamso
         </a>
         <a href="#contact">Home</a>
-        <a href="/">
+        <a href="#home">
           <button className="mybtn" onClick={openNewPage}>
             Logout <i className="fas fa-sign-out-alt"></i>
           </button>

@@ -45,8 +45,8 @@ const Form: React.FC = () => {
 
   return (
     <main>
-      <div id="login-form-wrap">
-        <h2>Sigin In</h2>
+        <div id="login-form-wrap">
+        <h2>SigIn</h2>
         <form id="login-form" onSubmit={handleSubmit}>
           <p>
             <input
@@ -57,10 +57,6 @@ const Form: React.FC = () => {
               onChange={handlePhoneNumberChange}
               placeholder="Phone number"
             />
-            <i className="validation">
-              <span></span>
-              <span></span>
-            </i>
           </p>
           <div className="password-container">
             <input
@@ -84,7 +80,9 @@ const Form: React.FC = () => {
           </p>
         </form>
       </div>
+  
     </main>
+    
   );
 };
 

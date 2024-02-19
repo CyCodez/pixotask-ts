@@ -6,7 +6,11 @@ main {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    width:100%;
     margin: 0;
+}
+*{
+  box-sizing: border-box;
 }
 
 h2 {
@@ -209,60 +213,47 @@ input[type="submit"]:hover {
             padding:4px;
         }
 
-        @media only screen and (max-width: 150px) {
-#login-form-wrap {
-  color:#fff;
-  width: 80% ;
-  height: auto;
-  margin: 30px auto;
-  border-radius: 10px;
-  text-align: center;
-  padding: 20px 0 0 0;
-  border-radius: 7px;
-  box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.2);
-    padding: 25px;
-    border: none;
-    text-align: center; 
+     @media screen and (max-width: 768px) {
+  /* Styles for screens smaller than 768px */
+  h2{
+    font-size: 23px;
+    margin-bottom: -18px;
+    margin-top: 8px;
+    font-weight: bolder;
+      box-sizing: border-box;
+      letter-spacing: 1.5px;
+  }
+  #login-form-wrap {
+    /* Example styles, adjust as needed */
+    width: 90%;
+    height: 85%;
+    margin: auto;
+  }
+input{
+  height: 50px;
 }
-
-input[type="text"],
-input[type="email"] {
-  width: 100%;
-  padding: 60px;
-  height: 80px;
-  margin: 0;
-  color: #8a8b8e;
-  border: 1px solid #c2c0ca;
-  font-style: normal;
-  font-size: 46px;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  #login-form {
+    /* Example styles, adjust as needed */
+    padding: 7px;
+  }
+input[type="submit"] {
+  border: none;
+  display: block;
+  background-color: #343a40;
+  border-radius: 15px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  font-size: 22px;
+  width:100%;
+  height: 55px;
   position: relative;
   display: inline-block;
-  border-radius: 10px;
-  margin-bottom: 15px;
-  background-color: white;
+  cursor: pointer;
+  text-align: center;
 }
-input[type="submit"]{
-  height: 110px;
-  font-size: 45px;
-}
-#passwordField{
-   padding: 60px;
-   height: 80px;
-    margin-bottom: 15px;
-}
-
- ::placeholder{
-            font-size: 30px;
-            padding:10px;
-        }
-#login-form-wrap h2{
-  font-size: 50px;
-  font-weight: bold;
-}
-.toggle-password{
-  font-size: 35px;
-}
+  /* Add more styles for smaller screens as needed */
 }

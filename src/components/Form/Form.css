@@ -226,7 +226,7 @@ input[type="submit"]:hover {
   #login-form-wrap {
     /* Example styles, adjust as needed */
     width: 90%;
-    height: 90vh;
+    height: auto;
     margin: auto;
   }
 input{

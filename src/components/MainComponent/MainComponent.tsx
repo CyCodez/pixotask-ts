@@ -6,13 +6,20 @@ import { useNavigate } from "react-router-dom";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 
+interface myData {
+  businessName: string;
+  name: string;
+  phone: string;
+  signedUp: string;
+}
+
 const MainComponent: React.FC = () => {
     const navigate = useNavigate()
   const openNewPage = () => {
     navigate("/")
   };
 
-  const data = [
+  const data: myData[] = [
     {
       businessName: "cta media concepts",
       name: "taiwo adebayo",

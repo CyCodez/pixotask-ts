@@ -2,9 +2,14 @@ import React, { useEffect } from "react";
 import Chart from "chart.js/auto";
 import "./BarChart.css"
 
+interface chartData{
+  date: string;
+  signUps: number
+}
+
 const SignUpsChart: React.FC = () => {
   useEffect(() => {
-    const data = [
+    const data: chartData[] = [
       {
         date: "2023-12-27",
         signUps: 2,

@@ -1,4 +1,3 @@
-import React from 'react';
 import './App.css';
 import Form from './components/Form/Form';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -7,7 +6,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* <MainComponent/> */}
       <Router>
         <Routes>
           <Route path="/" element={<Form />} />

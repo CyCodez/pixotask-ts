@@ -30,7 +30,9 @@ font-size: 18px;
   padding: 26px;
   text-decoration: none;
 }
- 
+ .sidebar a:hover{
+  color:black;
+ }
 .mybtn{
  background-color: #e03131;
   color: white;

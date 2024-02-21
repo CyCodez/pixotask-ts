@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate from react-router-dom
 
 function useForm() {
-  const [phoneNumber, setPhoneNumber] = useState<number | "">("");
-  const [password, setPassword] = useState<number | string | "">("");
+  const [phoneNumber, setPhoneNumber] = useState<string | "">("");
+  const [password, setPassword] = useState<string | "">("");
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const navigate = useNavigate(); // Get the navigate function
 
@@ -12,7 +12,7 @@ function useForm() {
   ) => {
     const value = event.target.value;
     if (!isNaN(Number(value))) {
-      setPhoneNumber(Number(value));
+      setPhoneNumber((value));
     }
   };
 
@@ -30,11 +30,11 @@ function useForm() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     // Validation
-    if (!phoneNumber) {
-      alert("Enter phone number");
+    if (phoneNumber.length < 11 || !phoneNumber) {
+      alert("Enter a valid phone number");
       return;
-    } else if (!password) {
-      alert("Enter password");
+    } else if (password.length < 4 || !password) {
+      alert("Enter a valid password");
       return;
     }
 

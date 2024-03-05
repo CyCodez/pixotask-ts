@@ -1,14 +1,14 @@
 import React from "react";
-import "./MainComponent.css";
-import UserTable from "../Table/Table";
-import SignUpsChart from "../BarChart/BarChart";
-import useMainComponent from "../hooks/useMainComponent";
-import useData from "../hooks/useData";
+import "./main-component.css";
+import UserTable from "../Table/table";
+import SignUpsChart from "../BarChart/bar-chart";
+import useMainComponent from "../Hooks/use-main-component";
+import useData from "../Hooks/use-data";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
-const MainComponent: React.FC = () => {
-    const { openNewPage } = useMainComponent()
-  const data = useData()
+const MainComponent: React.FC = (): JSX.Element => {
+  const { openNewPage } = useMainComponent();
+  const data = useData();
   return (
     <div>
       <div className="sidebar">

@@ -1,7 +1,7 @@
-import useForm from "../hooks/useForm";
-import "./Form.css";
+import useForm from "../Hooks/use-form";
+import "./form.css";
 
-const Form: React.FC = () => {
+const Form: React.FC = (): JSX.Element => {
   const {
     phoneNumber,
     password,
@@ -15,7 +15,7 @@ const Form: React.FC = () => {
   return (
     <main>
       <div id="login-form-wrap">
-        <h2>SigIn</h2>
+        <h2>Sign In</h2>
         <form id="login-form" onSubmit={handleSubmit}>
           <p>
             <input

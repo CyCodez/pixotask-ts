@@ -1,18 +1,8 @@
-import React from 'react';
-import "./Table.css"
+import React from "react";
+import { UserTableProps } from "../Interfaces/interface";
+import "./table.css";
 
-interface User {
-  businessName: string;
-  name: string;
-  phone: string;
-  signedUp: string;
-}
-
-interface UserTableProps {
-  data: User[];
-}
-
-const UserTable: React.FC<UserTableProps> = ({ data }) => {
+const UserTable: React.FC<UserTableProps> = ({ data }): JSX.Element => {
   return (
     <div className="table-container">
       <h2>New SignUp</h2>

@@ -1,13 +1,15 @@
 import React, { useEffect } from "react";
-import useBarChart from "../hooks/useBarChart";
+import useBarChart from "../Hooks/use-bar-chart";
 import Chart from "chart.js/auto";
-import "./BarChart.css";
+import { ChartData } from "../Interfaces/interface";
+import "./bar-chart.css";
 
-const SignUpsChart: React.FC = () => {
-  const data = useBarChart();
+const SignUpsChart: React.FC = (): JSX.Element => {
+  const data: ChartData[] = useBarChart();
+
   useEffect(() => {
-    const dates = data.map((item) => item.date).reverse();
-    const signUps = data.map((item) => item.signUps).reverse();
+    const dates: string[] = data.map((item) => item.date).reverse();
+    const signUps: number[] = data.map((item) => item.signUps).reverse();
 
     const ctx = document.getElementById(
       "signUpsChart"
@@ -37,7 +39,7 @@ const SignUpsChart: React.FC = () => {
         },
       });
 
-      const resizeObserver = new ResizeObserver((entries) => {
+      const resizeObserver = new ResizeObserver((entries): void => {
         entries.forEach((entry) => {
           if (entry.contentRect.width < 600) {
             chart.options.maintainAspectRatio = true;

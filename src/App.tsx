@@ -1,9 +1,9 @@
-import './App.css';
-import Form from './components/Form/Form';
+import "./App.css";
+import Form from "./components/Form/form";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import MainComponent from './components/MainComponent/MainComponent';
-function App() {
+import MainComponent from "./components/MainComponent/main-component";
 
+function App(): JSX.Element {
   return (
     <div className="App">
       <Router>
